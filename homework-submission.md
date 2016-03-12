@@ -1,6 +1,6 @@
 #Instructions for Submitting Homework
 
-Homework and labs will each have their own repository.  These repositories will usually live in the `sf-wdi-27-28` GitHub organization.
+Homework and labs will each have their own repository.  These repositories will usually live in the class GitHub organization.
 
 Each night, you'll be asked to submit pull requests to one or more repositories.  Check your class's schedule every day for links to the homework for each night. 
 
@@ -52,7 +52,7 @@ When you're ready to submit your homework (and it's okay if you only have a part
 
 7. Once you're done with the assignment and have committed and pushed ALL of your changes to GitHub, it's time to make a pull request back to the original repo. Go to your forked copy of the repo on GitHub, and click the "Pull Request" button.
 
-  ![pull request button screenshot](https://cloud.githubusercontent.com/assets/3010270/13687969/7ed9d38c-e6d3-11e5-9510-ac0fbf1f22e9.png)
+  ![make new pull request button screenshot](https://cloud.githubusercontent.com/assets/3010270/13687969/7ed9d38c-e6d3-11e5-9510-ac0fbf1f22e9.png)
 
 8. GitHub takes you to a new view and asks if you want to create the pull request. Add this information to the pull request:
 
@@ -67,5 +67,5 @@ When you're ready to submit your homework (and it's okay if you only have a part
 
 1. Click the green button, and that's it - you've now created a pull request to submit the homework or lab!
 
-  ![screen-shot-2015-10-20-at-17 25 49](https://cloud.githubusercontent.com/assets/7833470/10625507/bc97d38a-7758-11e5-8fe9-e4846e06e454.png)
+  ![create/submit pull request button screenshot](https://cloud.githubusercontent.com/assets/7833470/10625507/bc97d38a-7758-11e5-8fe9-e4846e06e454.png)
 
