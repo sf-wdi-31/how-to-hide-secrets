@@ -54,15 +54,15 @@ When you're ready to submit your homework (and it's okay if you only have a part
 
   ![make new pull request button screenshot](https://cloud.githubusercontent.com/assets/3010270/13687969/7ed9d38c-e6d3-11e5-9510-ac0fbf1f22e9.png)
 
-8. GitHub takes you to a new view and asks if you want to create the pull request. Add this information to the pull request:
+8. GitHub takes you to a new view and asks if you want to create the pull request. We want to know how each assignment went! Please add the following information to each of your homework pull requests:
 
-	Title: w01 d01
+	```
+	w01 d01
 
-	Description:
-		comfort: 3/5
-		completeness: 4/5
-		Here are my thoughts on how the homework assignment went....
-
+	comfort: 3/5
+	completeness: 4/5
+	Here are my thoughts on how the homework assignment went....
+	```
 
 
 1. Click the green button, and that's it - you've now created a pull request to submit the homework or lab!
