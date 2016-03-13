@@ -10,19 +10,22 @@ We encourage you to request at least 3 code reviews during your time as a studen
 
 ## How to Request a Code Review
 
-1. Push your project to github.
+1. Push your project to GitHub.
 2. Add your instructor/reviewer as a collaborator (*Settings > Collaborators & Teams > Add Collaborator*).
-    + jlopker - Juliana
-    + justincastilla - Justin
-    + nathanallen - Nathan
-3. To request the review, simply send a message to your instructor using Slack with a link to your project
-    + Please also take a moment to describe what you're doing, and indicate any areas of concern / code you want us to pay particular attention to.
+    + bgveenstra - Brianna (27)
+    + cofauver - Cory (27)
+    + tgaff - Travis (27)
+    + jlopker - Juliana (28)
+    + justincastilla - Justin (28)
+    + nathanallen - Nathan (28)
+3. To request the review, simply send a message to your instructor using Slack with a link to your project.
+    + Describe what you're doing, and indicate any areas of concern / code you want us to pay particular attention to.
 
 #### What to expect
 
 Depending on your instructor, your review may entail:
 
-- **Github Issues**: these are commonly used to flag problems/issues with code, or areas of concern.
-    + Github issues can be closed or resolved either on github or by writing commit messages that reference the issue number (e.g. `git commit -m "fixes #10"`).
+- **GitHub Issues**: these are commonly used to flag problems/issues with code, or areas of concern.
+    + GitHub issues can be closed or resolved either on GitHub or by writing commit messages that reference the issue number (e.g. `git commit -m "fixes #10"`).
 - **A `code_review` branch**: This may either be a single commit with many inline comments/todos, or multiple commits, each addressing/fixing a specific problem.
     + We do not advise you merge code_review branches into your master branch -- please take the time to learn/absorb the feedback and implement the changes yourself.
