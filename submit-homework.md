@@ -14,7 +14,7 @@ Each night, you'll be asked to submit you homework as a "Pull Request".
 
 **Do NOT Submit**
 
-* Exercises from morning/afternoon modules. These are are for your own practice / review and are NOT submitted.
+* Exercises from morning/afternoon modules. These are are for your own practice / review and are NOT submitted unless explicitly requested.
 
 ## Fork and Pull Request Workflow
 
