@@ -1,11 +1,24 @@
 #Instructions for Submitting Homework
 
-Homework and labs will each have their own repository.  These repositories will usually live in the class GitHub organization.
+Check your class schedule for nightly homeworks and weekend labs.
 
-Each night, you'll be asked to submit pull requests to one or more repositories.  Check your class's schedule every day for links to the homework for each night. 
+Homework and labs will each live in their own repository, which you will need to **fork & clone**.  These repositories will usually live in your class's GitHub organization.
+
+Each night, you'll be asked to submit you homework as a "Pull Request".
+
+## What's submitted?
+**Do Submit**
+
+* If we say "**DUE TONIGHT**" in the homework schedule, we want you to submit it as a Pull Request (see below).
+	* You should always *fork & clone* homework.
+
+**Do NOT Submit**
+
+* Exercises from morning/afternoon modules. These are are for your own practice / review and are NOT submitted unless explicitly requested.
 
 ## Fork and Pull Request Workflow
 
+In order to submit homework, you must first *fork & clone* the homeowork/lab repo. If you do not *fork & clone*, you will not be able to submit a Pull Request. Here are the steps:
 
 1. Create a fork of the class version of a repository by clicking "Fork" on the top right. Make sure you're starting from the class version linked in the schedule.
 
@@ -27,9 +40,9 @@ Each night, you'll be asked to submit pull requests to one or more repositories.
   ➜  git clone <clone-url>
   ```
 
-5. You should now have a copy of the repo inside your `~/wdi` directory! Change directories into the repo you cloned, and complete the tasks from the homework instructions. 
+5. You should now have a copy of the repo inside your `~/wdi` directory! Change directories into the repo you cloned. 
 
-1. Remember to commit your local changes as you go, and check `git status`!
+1. As you complete the tasks from the homework instructions, remember to commit your local changes as you go, and check `git status`!
 
   ```
   ➜  git add <filename>
