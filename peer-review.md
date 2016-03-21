@@ -4,7 +4,7 @@
 
 | Objectives |
 | :--- |
-| Create a Github Issue for your project |
+| Create a Github Issue for your project ([instructions](report-an-issue.md)) |
 | Fork & then clone your partner's project |
 | Pair program to resolve the Github Issue & submit a Pull Request |
 
