@@ -1,14 +1,12 @@
 # Peer Review
 ![request](https://cloud.githubusercontent.com/assets/3010270/13824932/53d10ca2-eb6d-11e5-9b7d-50e21706351c.png)
-## Peer Review
+
 
 | Objectives |
 | :--- |
-| Create a Github Issue for your project ([instructions](report-an-issue.md)) |
+| Create a Github Issue for your project ([what to include](report-an-issue.md)) |
 | Fork & then clone your partner's project |
 | Pair program to resolve the Github Issue & submit a Pull Request |
-
-**Please keep track of time -- you should spend roughly 75 min with each of your partners**
 
 ###1. Create an Issue (10m)
 
@@ -16,7 +14,7 @@
 * Discuss 1 minor issue in your project. Make sure it's a simple issue, like a small addition, that could be solved relatively quickly with the tools we already have - jQuery, express, etc.
 * On Github, create a new Issue. Be descriptive of what is wrong and how you'd like it fixed. Maybe give some rough steps you'd take to solve it.
 
-![issues](https://cloud.githubusercontent.com/assets/3010270/13824851/1067e918-eb6d-11e5-93ca-e8af61c5a313.png)
+![issues](https://cloud.githubusercontent.com/assets/3010270/13924807/f123ddee-ef42-11e5-96c5-7766928b9996.png)
 
 ###2. Setup the Project (30m)
 1. __Fork__ your partner's project.
@@ -38,7 +36,7 @@
 4. Navigate to your repo on Github.com and submit the branch `fix_signin_redirect` as a pull request.
 5. The project owner should code review and merge the pull request. They can code review small changes on Github itself, or they can fetch the pull request and view it locally.
 
-![pull_request](https://cloud.githubusercontent.com/assets/3010270/13824901/3ef5d844-eb6d-11e5-8e5e-6dbc912530c2.png)
+![pull_request](https://cloud.githubusercontent.com/assets/3010270/13924903/681bb00c-ef43-11e5-8197-390fb908838a.png)
 
 ###5. Repeat
 Make sure you each get a chance to create and resolve a github issue. Try to split your time equally between each project.
