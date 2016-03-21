@@ -16,7 +16,7 @@
 
 ![issues](https://cloud.githubusercontent.com/assets/3010270/13924807/f123ddee-ef42-11e5-96c5-7766928b9996.png)
 
-###2. Setup the Project (30m)
+###2. Setup the Project (5m)
 1. __Fork__ your partner's project.
 2. __Clone__ the fork you just made locally.
 3. Make a new __branch__ named after the issue you're solving.
@@ -39,4 +39,4 @@
 ![pull_request](https://cloud.githubusercontent.com/assets/3010270/13924903/681bb00c-ef43-11e5-8197-390fb908838a.png)
 
 ###5. Repeat
-Make sure you each get a chance to create and resolve a github issue. Try to split your time equally between each project.
+Make sure you each get a chance to create and resolve a github issue.
