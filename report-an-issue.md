@@ -10,15 +10,15 @@ GitHub has thorough [documentation on creating an issue](https://help.github.com
 
 ## What to Include
 
-#### Expected Behavior
+#### Expected Behavior (Required!)
 
 > What was your goal? What did you want to happen?
 
-#### Actual Behavior
+#### Actual Behavior (Required!)
 
 > What happened instead?
 
-#### Steps to reproduce this behavior?
+#### Steps to reproduce this behavior? (Required!)
    
 > What did you try? Be as specific as possible. You and others will need to to reproduce
       your issue in order to fix it. Code samples and lists of steps you took are great here.
