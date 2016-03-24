@@ -1,7 +1,7 @@
 # Vocab / Jargon
 ## Talking the Talk
 
-####Week 1
+#### Week 1
 * Shell (Computing)
 * command line interface
   * pwd
@@ -71,7 +71,7 @@
 * CDN
 
 
-####Week 2 & 3
+#### Week 2
 * constructor
 * prototype
 * O.O.P.
@@ -94,7 +94,9 @@
 * client
 * server
 * input validation
-<!-- ####Week 3 --> <!--  week 2 was only 2 days for WDI25 :-/ -->
+
+#### Week 3
+
 * Express
 * HTTP
 * Resource path
