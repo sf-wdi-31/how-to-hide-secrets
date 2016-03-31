@@ -44,7 +44,7 @@ Authenticating is required to allow both the heroku and git commands to operate.
     app.listen(process.env.PORT || 3000)
 ```
 
-6) **NEW STEP!** Tell heroku to use the mongolab addon. In your terminal, run:
+6) Tell heroku to use the mongolab addon. In your terminal, run:
 
 ```bash
     heroku addons:create mongolab
@@ -54,7 +54,7 @@ At this point, the command line will probably ask you to enter a credit card num
 
 > Heroku is a "freemium" service. Be careful! They will charge you if you exceed their data limits -- but our projects are tiny so we don't expect to get a lot of traffic!
 
-7) **Patience...**  If you had to enter in a credit card, run the `heroku addons:create mongolab` command again. __You may need to wait a few minutes for mogolab to become active.__
+7) **Patience...**  If you had to enter in a credit card, run `heroku addons` command to check/confirm mongolab was addded. __You may need to wait a few minutes for mogolab to become active.__
 
 8) Update your database connection to point to Heroku's database. Open `models/index.js` and add the following to the `mongoose.connect` method:
 
