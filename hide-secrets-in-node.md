@@ -88,5 +88,5 @@ You can check that you've successfully set the variables:
 
 ## Resources
 
-[dotenv docs](https://github.com/motdotla/dotenv)
+[dotenv docs](https://github.com/motdotla/dotenv)    
 Heroku's [configuration variables set up docs](https://devcenter.heroku.com/articles/config-vars)
