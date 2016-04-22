@@ -59,7 +59,7 @@ At this point, the command line will probably ask you to enter a credit card num
 8) Update your database connection to point to Heroku's database. Open `models/index.js` and add the following to the `mongoose.connect` method:
 
 ```javascript
-    mongoose.connect( process.env.MONGOLAB_URI ||
+    mongoose.connect( process.env.MONGODB_URI ||
                       process.env.MONGOHQ_URL || 
                       "YOUR CURRENT LOCALHOST DB CONNECTION STRING HERE" )
 ```
