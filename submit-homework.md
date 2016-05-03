@@ -9,7 +9,7 @@ Each night, you'll be asked to submit you homework as a "Pull Request".
 ## What's submitted?
 **Do Submit**
 
-* If we say "**DUE TONIGHT**" in the homework schedule, we want you to submit it as a Pull Request (see below).
+* If we say "**DUE TONIGHT**" or ask you to submit a pull request in the homework schedule, we want you to submit it as a Pull Request (see below).
 	* You should always *fork & clone* homework.
 
 **Do NOT Submit**
