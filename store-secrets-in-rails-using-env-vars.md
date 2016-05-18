@@ -5,6 +5,14 @@
 **If your key has already been checked in, even if you didn't push; go and revoke that key immediately.**
 Hackers can easily scan even OLD commits for keys in minutes.
 
+Don't let this become you:
+
+<img src="assets/AWS_bill_cropped.jpg" style="max-width: 400px">
+
+--
+
+This guide will show you how to add your keys as _environment variables_ in a shell script, then `source` that shell script and use the variables in your Ruby code.
+
 ## secrets.sh
 
 We're going to store our secret keys in a shell script that will set them as environment variables.  
