@@ -124,3 +124,10 @@ In a yml file:
 ```sh
 heroku config:set FLICKR_API_KEY=ff333ejfjf
 ```
+
+
+## Remember
+
+When it comes to your secret keys: 
+
+<img src="assets/keep_it_secret.jpg" style="max-width: 400px">
