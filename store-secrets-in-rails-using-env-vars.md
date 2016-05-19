@@ -13,6 +13,9 @@ Don't let this become you:
 
 This guide will show you how to add your keys as _environment variables_ in a shell script, then `source` that shell script and use the variables in your Ruby code.
 
+Read on for a full discussion on using secret keys.
+
+
 ## secrets.sh
 
 We're going to store our secret keys in a shell script that will set them as environment variables.  
@@ -48,7 +51,7 @@ Let's get started
   In your terminal run: `source secrets.sh`
   * This reads the file into the context of the current terminal session.  
   * You can check the values using `env` or by echoing the variable like `echo $MY_KEY_NAME`
-  * Note: you'll need to run this _once_ for every terminal where you want to run your project; even if you're just running `rake` or `rails c`.
+  * **Note: you'll need to run this _once_ for every terminal where you want to run your project; even if you're just running `rake` or `rails c`.**
 
 
 ## Using environment variables in Rails
@@ -59,14 +62,15 @@ In Ruby's case they're stored in a Hash called `ENV`.
 
 You can test this out by opening `irb` or `pry` or `rails c` and typing `ENV`.  
 
-> Note: how similar `ENV` is to the terminal command `env`.
+> Note: how similar `ENV` is to the terminal command `env`?
 
-In order to use these in Rails you'll have to replace whatever code is using the key with the appropriate environment variable.
+In order to use these in Rails you'll have to replace whatever code is using the hard-coded key with the appropriate code to access the environment variable.
 
 For example:
 
 ```rb
   # somewhere.rb
+    # accessing environment variable stored by `export MY_KEY_NAME="something"`
     api_key = ENV['MY_KEY_NAME']
     other_api_key = ENV['MY_OTHER_KEY_NAME']
     ...
@@ -82,12 +86,41 @@ Or maybe you're using this in a `yml` file?
 
 ## Setting the keys on heroku
 
-Since we're not checking our secrets in heroku won't know them.  We have to tell it manually.
+Since we're not checking our secrets into git, heroku won't know them.  We have to tell heroku manually.
 
-> Checkout the command: `heroku help config`
+> Try out the command: `heroku help config`
 
 When you're ready to set a key on heroku simply run:
 
 ```bash
   heroku config:set MY_KEY_NAME=MY_KEY_VALUE
+```
+
+
+## tldr cheatsheet
+
+##### Setting an environment variable in the shell/terminal:
+
+```sh
+export FLICKR_API_KEY=ff333ejfjf
+```
+
+##### Accessing an environment variable in ruby
+
+In a ruby file:
+
+```rb
+  flickr_api_key = ENV['FLICKR_API_KEY']
+```
+
+In a yml file:
+
+```yml
+    api_key: <%= ENV["FLICKR_API_KEY"] %>
+```
+
+##### Setting an environment variable on heroku
+
+```sh
+heroku config:set FLICKR_API_KEY=ff333ejfjf
 ```
