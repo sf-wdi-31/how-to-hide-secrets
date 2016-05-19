@@ -13,7 +13,7 @@ Don't let this become you:
 
 This guide will show you how to add your keys as _environment variables_ in a shell script, then `source` that shell script and use the variables in your Ruby or Node code.
 
-Read on for a full discussion on using secret keys.  Or [click here for the cheatsheet](#tldr cheatsheet).
+Read on for a full discussion on using secret keys.  Or [click here for the cheatsheet](#tldr-cheatsheet).
 
 
 ## secrets.sh
