@@ -11,9 +11,9 @@ Don't let this become you:
 
 --
 
-This guide will show you how to add your keys as _environment variables_ in a shell script, then `source` that shell script and use the variables in your Ruby code.
+This guide will show you how to add your keys as _environment variables_ in a shell script, then `source` that shell script and use the variables in your Ruby or Node code.
 
-Read on for a full discussion on using secret keys.
+Read on for a full discussion on using secret keys.  Or [click here for the cheatsheet](#tldr cheatsheet).
 
 
 ## secrets.sh
@@ -22,7 +22,11 @@ We're going to store our secret keys in a shell script that will set them as env
 That shell script will not be checked-in to git and we'll run it before running our server.
 
 > _Environment variables_ are just like regular variables except they live in your terminal.  
+
 > Most programming languages have access to environment variables.  To see a list of your current environment variables type `env` into the terminal.
+
+> Shell scripts allow you to right code in the language your shell or terminal runs; using shell commands.  Usually these are written in the `sh` or `bash` languages.
+
 
 Let's get started
 
@@ -54,7 +58,7 @@ Let's get started
   * **Note: you'll need to run this _once_ for every terminal where you want to run your project; even if you're just running `rake` or `rails c`.**
 
 
-## Using environment variables in Rails
+## Using environment variables in Ruby and Rails
   
 Ruby like many programming languages has access to environment variables.  
 
@@ -83,6 +87,17 @@ Or maybe you're using this in a `yml` file?
   production: 
     api_key: <%= ENV["MY_KEY_NAME"] %>
 ```
+
+## Using environment variables in Node
+
+Node also has access to the environment variables of the terminal it is run from.  In node these are stored in an object at `process.env`
+
+To access an environment variable called "`MY_KEY_NAME`", you would:
+
+```js
+var apiKey = process.env.MY_KEY_NAME;
+```
+
 
 ## Setting the keys on heroku
 
@@ -116,7 +131,13 @@ In a ruby file:
 In a yml file:
 
 ```yml
-    api_key: <%= ENV["FLICKR_API_KEY"] %>
+    flickr_api_key: <%= ENV["FLICKR_API_KEY"] %>
+```
+
+##### Accessing an environment variable using JavaScript in NodeJS
+
+```js
+var flickrApiKey = process.env.FLICKR_API_KEY;
 ```
 
 ##### Setting an environment variable on heroku
@@ -131,3 +152,5 @@ heroku config:set FLICKR_API_KEY=ff333ejfjf
 When it comes to your secret keys: 
 
 <img src="assets/keep_it_secret.jpg" style="max-width: 400px">
+
+If you ever check one into git, **immediately revoke or change that key** on the website that issued it.
