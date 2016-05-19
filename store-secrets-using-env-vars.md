@@ -114,7 +114,7 @@ When you're ready to set a key on heroku simply run:
 
 ## tldr cheatsheet
 
-##### Setting an environment variable in the shell/terminal:
+##### Setting an environment variable in the shell/terminal (or a shell script):
 
 ```sh
 export FLICKR_API_KEY=ff333ejfjf
@@ -146,6 +146,13 @@ var flickrApiKey = process.env.FLICKR_API_KEY;
 heroku config:set FLICKR_API_KEY=ff333ejfjf
 ```
 
+##### Sourcing a shell script
+
+This loads environment variables into your current terminal.  Do this before running `node`, `nodemon`, `rails`, `rake` or `ruby`.
+
+```sh
+$  source secrets.sh
+```
 
 ## Remember
 
