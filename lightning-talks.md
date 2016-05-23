@@ -8,6 +8,7 @@ Your goal is to create a 5-6 minute presentation on a topic that is useful to yo
 
 Lightning talks will be on Wednesday morning next week, December 9th.
 
+##Signup for your topic [here](https://docs.google.com/spreadsheets/d/19lhOKlMHJW-bn604_x1eNtQwolCN44aCjBrXmbzv208/edit?usp=sharing)
 ##Topics:
 Here are some suggestions; you are welcome to add your own:
 
