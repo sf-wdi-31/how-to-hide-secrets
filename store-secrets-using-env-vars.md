@@ -1,4 +1,4 @@
-# Manually managing secret keys for Rails apps
+# Manually managing secret keys with environment variables
 
 **Never EVER check a secret key into git**
 
