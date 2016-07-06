@@ -11,12 +11,12 @@ Don't let this become you:
 
 --
 
-This guide will show you how to add your keys as _environment variables_ in a shell script, then `source` that shell script and use the variables in your Ruby or Node code.
+This guide will show you how to add your keys as _environment variables_ in a shell script (in Terminal), then `source` that shell script and use the variables in your Ruby or Node code.
 
 Read on for a full discussion on using secret keys.  Or [click here for the cheatsheet](#tldr-cheatsheet).
 
 
-## secrets.sh
+## Creating and Running the Shell Script (`secrets.sh`)
 
 We're going to store our secret keys in a shell script that will set them as environment variables.  
 That shell script will not be checked-in to git and we'll run it before running our server.
@@ -30,8 +30,7 @@ That shell script will not be checked-in to git and we'll run it before running 
 
 Let's get started
 
-1. First let's add `secrets.sh` to our `.gitignore` file to prevent us from checking it in.
-  Open `.gitignore` and add a line like `secrets.sh`
+1. First let's add `secrets.sh` to our `.gitignore` file to prevent us from checking it in.  The `secrets.sh` file doesn't even exist yet, which is a great time to ignore it. Open `.gitignore`, add a line that just says `secrets.sh`, and save the file.
 
 1. Add and commit the .gitignore file.
 
@@ -40,66 +39,65 @@ Let's get started
   git commit -m "conceal secrets"
   ```
   
-1. Now that git will ignore secrets.sh let's create it: `touch secrets.sh` and open it in your editor.  
-   Add your secret keys in the following format:
+1. Now that git will ignore `secrets.sh`, we can create it. Run `touch secrets.sh`, then open the new `secrets.sh` file in your editor.  
+   Add your secret keys in exactly the following format, but replace the quoted phrases with your key's actual values, in quotes:
 
   ```sh
   export MY_KEY_NAME="key value"
   export MY_OTHER_KEY_NAME="other value"
   ```
   
-  We can use the same syntax to set environment variables in the terminal itself.
+  This is the syntax of the `bash` language - we can use the same syntax to set environment variables in the terminal itself.
 
 
-1. Load the variables into the shell.
-  In your terminal run: `source secrets.sh`
-  * This reads the file into the context of the current terminal session.  
-  * You can check the values using `env` or by echoing the variable like `echo $MY_KEY_NAME`
-  * **Note: you'll need to run this _once_ for every terminal where you want to run your project; even if you're just running `rake` or `rails c`.**
+1. Load the variables into the shell. In your terminal run: `source secrets.sh`.  This reads the file into the context of the current terminal session.  
 
-
-## Using environment variables in Ruby and Rails
+  Check the values using `env`, or check a specific environment variable with the `echo` command: `echo $MY_KEY_NAME`.
   
-Ruby like many programming languages has access to environment variables.  
+  **Note: you'll need to source the secrets file _once_ for every terminal where you want to run your project, even if you're just running `rake` or `rails c`.**
 
-In Ruby's case they're stored in a Hash called `ENV`.
+
+## Using Environment Variables in Ruby and Rails
+  
+Ruby, like many programming languages, has access to environment variables.  
+
+In Ruby's case, they're stored in a Hash called `ENV`.
 
 You can test this out by opening `irb` or `pry` or `rails c` and typing `ENV`.  
 
-> Note: how similar `ENV` is to the terminal command `env`?
+> Note: how similar is Ruby's `ENV` hash to the output of the terminal command `env`?
 
-In order to use these in Rails you'll have to replace whatever code is using the hard-coded key with the appropriate code to access the environment variable.
+In order to use these environment variables in Rails files, you'll access the `ENV` hash when you need the value of the environment variable.
 
-For example:
+For example, if your `secrets.sh` file has a line `export MY_KEY_NAME="super_secret"`, and you've `source`d it, and the `secrets.sh` file is in your `.gitignore` you can do:
 
-```rb
-  # somewhere.rb
-    # accessing environment variable stored by `export MY_KEY_NAME="something"`
-    api_key = ENV['MY_KEY_NAME']
-    other_api_key = ENV['MY_OTHER_KEY_NAME']
-    ...
-  end
-```
+  ```rb
+  # somewhere in your app's ruby files that *will* get checked into git
+  # api_key = "super secret"      ## NO! NEVER AGAIN! Hide those secrets!
+  api_key = ENV['MY_KEY_NAME']  # yes! 
+  
+  ```
 
 Or maybe you're using this in a `yml` file?
 
-```yml
+  ```yml
+  # somewhere in your app's yml files that *will* get checked into git
   production: 
-    api_key: <%= ENV["MY_KEY_NAME"] %>
-```
+    api_key: <%= ENV["MY_KEY_NAME"] %>   # yes!
+  ```
 
-## Using environment variables in Node
+## Using Environment Variables in Node
 
-Node also has access to the environment variables of the terminal it is run from.  In node these are stored in an object at `process.env`
+Node also has access to the environment variables of the terminal it is run from.  In node these are stored in an object called `process.env`.
 
-To access an environment variable called "`MY_KEY_NAME`", you would:
+To access an environment variable called "`MY_KEY_NAME`", you would do:
 
 ```js
 var apiKey = process.env.MY_KEY_NAME;
 ```
 
 
-## Setting the keys on heroku
+## Setting Environment Variables on Heroku
 
 Since we're not checking our secrets into git, heroku won't know them.  We have to tell heroku manually.
 
@@ -107,9 +105,9 @@ Since we're not checking our secrets into git, heroku won't know them.  We have 
 
 When you're ready to set a key on heroku simply run:
 
-```bash
+  ```bash
   heroku config:set MY_KEY_NAME=MY_KEY_VALUE
-```
+  ```
 
 
 ## tldr cheatsheet
@@ -160,4 +158,4 @@ When it comes to your secret keys:
 
 <img src="assets/keep_it_secret.jpg" style="max-width: 400px">
 
-If you ever check one into git, **immediately revoke or change that key** on the website that issued it.
+If you ever check one into git, **immediately deactivate and change that key** on the website that issued it.
