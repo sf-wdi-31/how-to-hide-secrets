@@ -66,11 +66,31 @@ At this point, the command line will probably ask you to enter a credit card num
 
 Congrats! Your application knows what port to run on, and what database to connect to - you're almost all set up to work in "production" on Heroku's servers!
 
+STOP AND COMMIT!
+
+### Setup `.gitignore` (Recommended)
+From inside your project directroy, run:
+```bash
+touch .gitignore
+```
+
+Next, open `.gitignore` in your text editor, and add the following line:
+```
+node_modules
+```
+
+Finally, run the following command to untrack your `node_modules` folder (it's not *your* code, so we don't want to track it!):
+```bash
+git rm -r --cached node_modules
+```
+
+STOP AND COMMIT!
+
 ### Confirm your Dependencies
 
 9) Double check your `package.json` to make sure that all your depenedencies are present. If something is missing install it.
 
-Here are some common dependencies:  
+For example, here are a bunch of common dependencies (*DO NOT COPY*):  
 ``` javascript
     {
       "dependencies": {
@@ -85,7 +105,7 @@ Here are some common dependencies:
     }
 ```
 
-For example, if you're using `mongoose` but don't have it listed in your package.json `dependencies`, run the following:
+If your `package.json` is missing any dependencies, you will need to both `install` and `--save` the package. For example, if you notice that the `mongoose` package is missing from your `package.json` you would need to run:
 
 ```bash
     npm install --save mongoose
