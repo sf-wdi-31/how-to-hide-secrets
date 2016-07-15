@@ -136,7 +136,8 @@ This is assuming your main application file is called `index.js`. If your main f
 -->
 
 ### Deploy!
-11) Stop and commit. We've made a lot of changes!
+
+10) Hold your horses! We've made a lot of changes -- let's STOP AND COMMIT!
 ``` bash
     git add . -A
     git commit -m "ready for heroku deploy attempt #1"
