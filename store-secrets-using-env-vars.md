@@ -58,6 +58,8 @@ Let's get started
 
 
 ## Using Environment Variables in Ruby and Rails
+
+Rails apps are generated with a `secrets.yml` file that stores some secret keys. It's best practice to add this to your .gitignore, but it's relatively safe to have public development and test keys.  You can look at `secrets.yml` for an example of using secret environment variables in a YML file.  If you've committed your `secrets.yml` to GitHub, you can regenerate secrets with `rake secret`. 
   
 Ruby, like many programming languages, has access to environment variables.  
 
@@ -78,13 +80,15 @@ For example, if your `secrets.sh` file has a line `export MY_KEY_NAME="super_sec
   
   ```
 
-Or maybe you're using this in a `yml` file?
+Or maybe you're using this in a `yml` file?  
 
   ```yml
   # somewhere in your app's yml files that *will* get checked into git
   production: 
     api_key: <%= ENV["MY_KEY_NAME"] %>   # yes!
   ```
+  
+  
 
 ## Using Environment Variables in Node
 
